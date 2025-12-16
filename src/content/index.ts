@@ -7,7 +7,7 @@ function checkAndClick() {
   chrome.storage.sync.get(
     ["selector", "text"],
     (items: { [key: string]: any }) => {
-      const selector = items.selector || "button";
+      const selector = items.selector || "span";
       const text = (items.text || "Hide sponsored result").toLowerCase();
 
       const elements = Array.from(document.querySelectorAll(selector));
